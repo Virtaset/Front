@@ -1,47 +1,56 @@
-import { useState, React } from 'react';
+import { useState, React, useEffect } from 'react';
 import { StyleSheet, View, Button, Alert, Text, TextInput } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
+import moment from 'moment';
 
+
+//Functional component to get the current price of electricity
 export default function ElectricityPrices()  {
-    const [date, setDate] = useState('')
-    const [hour, setHour] = useState('')
     const [price, setPrice] = useState('')
 
+    //Get the current date and time and format them using momentjs
+    var date = moment().utcOffset('+02:00').format('YYYY-MM-DD')
+    var hour = moment().utcOffset('+02:00').format('HH')
 
-  const getPrices = () => {
+  //Fetch the current price using date and time defined above
+  useEffect(() => {
     fetch(`https://api.porssisahko.net/v1/price.json?date=${date}&hour=${hour}`)
     .then(response => response.json())
-    .then(responseJson => setPrice(responseJson.price))
-    .catch(error => {
-      Alert.alert('Error', error);
-    });
-  }
+    .then(responseData => {
+      setPrice(responseData.price)
+    })
+    .catch(err => console.error(err))
+  });
 
+  //Return the current price and time
   return (
-    <View>
-        <Text>Syötä päivämäärä:</Text>
-        <TextInput style={styles.input}
-        placeholder='VVVV-KK-PP'
-        value={date}
-        onChangeText={(val) => setDate(val)} />
-
-        <Text>Syötä kellonaika:</Text>
-        <TextInput style={styles.input}
-        placeholder='0-23'
-        value={hour}
-        onChangeText={(val) => setHour(val)} />
-
-        <Button onPress={getPrices} title='Hae hinta' />
-        <Text>Sähkön hinta: {price} snt/kWh </Text>
+    <View style={[styles.container, styles.elevation]}>
+        <FontAwesome name='bolt' size={30}/>
+        <Text style={styles.electricityText}>Sähkön hinta klo {hour} :{"\n"} {price} c/kwh</Text>
     </View>
     
   );
 }
 
+//Preliminary styles for the app
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+      width: 200,
+      height: 200,
+      borderRadius: 50,
+      marginVertical: 120,
+      marginLeft: 100,
+      backgroundColor: 'white',
+      justifyContent: 'center',
+      alignItems: 'center'
   },
+  elevation: {
+    shadowColor: 'black',
+    shadowOffset: { width: 5, height: 5 },
+    elevation: 5,
+    shadowOpacity: 0.1,
+  },
+  electricityText: {
+      fontSize: 16,
+  }
 });
