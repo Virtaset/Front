@@ -22,11 +22,12 @@ export default function ElectricityPrices()  {
     .catch(err => console.error(err))
   });
 
+
   //Return the current price and time
   return (
     <View style={[styles.container, styles.elevation]}>
         <FontAwesome name='bolt' size={40}/>
-        <Text style={styles.electricityText}>Sähkön hinta klo {hour} :{"\n"} {price.toFixed(2)} snt/kWh</Text>
+        <Text style={styles.electricityText}>Sähkön hinta klo {hour} :{"\n"} {price} snt/kWh</Text>
     </View>
     
   );
