@@ -12,6 +12,7 @@ import Header from './components/Header';
 
 export default function App() {
 
+  // Generates the bottom tab navigator
   const Tab = createBottomTabNavigator();
 
   return (
@@ -31,12 +32,14 @@ export default function App() {
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
+          // Styling for the bottom tab navigator
           tabBarActiveTintColor: 'green',
           tabBarInactiveTintColor: 'gray',
         })}>
             <Tab.Screen name="Sähkön hinta" component={ElectricityPrices} />
             <Tab.Screen name="Historia" component={ElectricityHistory} />
           </Tab.Navigator>
+         {/* What is StatusBar for?  */}
         <StatusBar style="auto" />
       </NavigationContainer>
   );
