@@ -24,7 +24,7 @@ Important features include:
         npm install
 
 3. **Install expo go app from appstore or googleplay**
-4. **Start expo client in cmd **
+4. **Start expo client in cmd**
 5. **Use expo app on android or the camera app on iphone to copy the qr code**
 
 ## Roadmap
