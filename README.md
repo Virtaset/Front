@@ -27,5 +27,10 @@ Important features include:
 4. **Start expo client in cmd **
 5. **Use expo app on android or the camera app on iphone to copy the qr code**
 
-
+## Roadmap
+- [x] Make a frontpage for the app where the user can view current electricity prices
+- [ ] Add the history tab 
+- [ ] Search functionality in history tab
+- [ ] Add a tab where the user can compare electricity prices
+- [ ] A calculator to determine if using stock exchange electricity would be more profitable than if using fixed price contract
 
