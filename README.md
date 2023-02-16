@@ -14,7 +14,7 @@ Important features include:
 
 ## Built with
 - Expo
-- porssisahko.net api
+- porssisahko.net api - https://porssisahko.net/api
 
 ## Installation 
 
