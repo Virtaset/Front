@@ -25,7 +25,7 @@ export default function PriceNow() {
     fetchPrice()
     const interval = setInterval(() => {
       fetchPrice()
-      console.log(price)
+      //console.log(price)
     }, 10000)
     return () => clearInterval(interval)
   }, []);
@@ -44,14 +44,13 @@ export default function PriceNow() {
 //Preliminary styles for the app
 const styles = StyleSheet.create({
   container: {
-    width: 200,
-    height: 200,
-    borderRadius: 50,
-    marginVertical: 120,
-    marginLeft: 100,
-    backgroundColor: 'white',
+    alignItems: 'center',
     justifyContent: 'center',
-    alignItems: 'center'
+    marginTop: 50,
+    borderRadius: 120,
+    width: 180,
+    height: 180,
+    backgroundColor: 'white'
   },
   elevation: {
     shadowColor: 'black',
@@ -60,6 +59,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
   },
   electricityText: {
-    fontSize: 16,
+    fontSize: 15,
   }
 });

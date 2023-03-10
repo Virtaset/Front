@@ -23,7 +23,7 @@ export default function App() {
           if (route.name === 'Home') {
             iconName = 'md-flash-outline';
           } else if (route.name === 'Calculator') {
-            iconName = 'md-book-outline';
+            iconName = 'md-calculator-outline';
           }
 
           // You can return any component that you like here!

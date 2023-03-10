@@ -1,14 +1,15 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import { View, Text, Dimensions } from 'react-native';
+import React, { useEffect, useState } from 'react';
+
 
 export default function Calculator() {
-  return (
+  return(
     <View>
-        <Text>Calculator</Text>
+      <Text>Laskin</Text>
     </View>
   )
 }
 
 
 
-    
+
