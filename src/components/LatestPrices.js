@@ -24,13 +24,11 @@ export default function LatestPrices() {
     and reverse the array so it displays correclty in the victorychart */
     const filteredPrices = latestPrices.filter(price =>
         new Date(price.startDate) >= newStartDate && new Date(price.endDate) <= newEndDate);
-        
+
     const arrangedPrices = filteredPrices.reverse();
 
-        
-
-    
-
+    /*TODO: format the startDate to format 'HH',
+    so it displays properly in the victorychart */
 
     return (
         <VictoryChart
