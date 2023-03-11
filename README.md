@@ -10,7 +10,7 @@ Important features include:
 
 - **Seeing the current elecricity prices** - Open the app and the current electricity prices will be displayed
 
-- **See the history of electiricy prices** - Choose the app and prices from the last 24 hours will be displayed
+- **See the history of electiricy prices** - Open the app and prices from the last 24 hours will be displayed
 
 ## Built with
 - Expo
