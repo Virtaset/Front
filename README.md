@@ -10,11 +10,13 @@ Important features include:
 
 - **Seeing the current elecricity prices** - Open the app and the current electricity prices will be displayed
 
-- **See the history of electiricy prices** - Choose the "history" tab and view the history of electricity prices
+- **See the history of electiricy prices** - Choose the app and prices from the last 24 hours will be displayed
 
 ## Built with
 - Expo
-- porssisahko.net api - https://porssisahko.net/api
+- [porssisahko.net api] (https://porssisahko.net/api)
+- [Moment.js] (https://momentjs.com/)
+- [Victory] (https://formidable.com/open-source/victory/docs)
 
 ## Installation 
 
