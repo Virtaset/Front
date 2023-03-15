@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Dimensions } from "react-native";
 import { VictoryChart, VictoryTheme, VictoryBar } from "victory-native";
-import moment from "moment";
+
 
 //Functional component to fetch the latest electricity prices
 export default function LatestPrices() {
