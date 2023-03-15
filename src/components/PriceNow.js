@@ -8,8 +8,8 @@ export default function PriceNow() {
   const [price, setPrice] = useState()
 
   //Get the current date and hour and format them suitable for the API
-  var date = moment().format('YYYY-MM-DD')
-  var hour = moment().format('HH')
+  const date = moment().format('YYYY-MM-DD')
+  const hour = moment().format('HH')
 
   const fetchPrice = () => {
     fetch(`https://api.porssisahko.net/v1/price.json?date=${date}&hour=${hour}`)

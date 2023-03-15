@@ -7,6 +7,7 @@ import moment from "moment";
 export default function LatestPrices() {
     const [latestPrices, setLatestPrices] = useState([]);
 
+    //Fetch the electricity prices from the last 48 hours
     useEffect(() => {
         fetch('https://api.porssisahko.net/v1/latest-prices.json')
             .then(response => response.json())
