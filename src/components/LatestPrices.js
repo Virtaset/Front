@@ -13,13 +13,14 @@ export default function LatestPrices() {
             .then(response => response.json())
             .then(responseData => {
                 setLatestPrices(responseData.prices);
+                //console.log(latestPrices);
             })
             .catch(err => console.error(err))
     });
 
     //New start and end dates for filtering the latestPrices array
-    const newStartDate = new Date().setHours(0, 0, 0, 0);
-    const newEndDate = new Date().setHours(24, 0, 0, 0);
+    const newStartDate = new Date().setUTCHours(0, 0, 0, 0);
+    const newEndDate = new Date().setUTCHours(24, 0, 0, 0);
 
     /*Filter the array to only include prices within the current day
     and reverse the array so it displays correclty in the victorychart */
@@ -27,15 +28,24 @@ export default function LatestPrices() {
         new Date(price.startDate) >= newStartDate && new Date(price.endDate) <= newEndDate);
 
     const arrangedPrices = filteredPrices.reverse();
+    //console.log(arrangedPrices)
 
-    /*TODO: format the startDate to format 'HH',
-    so it displays properly in the victorychart */
+    
+    /* Format the price.startDate from 'YYYY-MM-DDTHH:MM:SS.000Z' to just 'HH'
+    to display it properly in the VictoryChart */
+    for (const price of arrangedPrices) {
+        const startDate = new Date(price.startDate);
+        const startDateHours = startDate.getUTCHours();
+        const formattedStartDate = `${startDateHours}`;
+
+        price.startDate = formattedStartDate;
+    }
 
     return (
         <VictoryChart
             theme={VictoryTheme.material}
             width={Dimensions.get('window').width}
-            height={250}
+            height={275}
         >
             <VictoryBar
                 data={arrangedPrices}

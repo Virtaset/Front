@@ -5,7 +5,7 @@ import moment from 'moment';
 
 //Functional component to get the current price of electricity
 export default function PriceNow() {
-  const [price, setPrice] = useState()
+  const [price, setPrice] = useState('')
 
   //Get the current date and hour and format them suitable for the API
   const date = moment().format('YYYY-MM-DD')
@@ -47,10 +47,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 50,
+    marginBottom: 60,
     borderRadius: 120,
     width: 180,
     height: 180,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   elevation: {
     shadowColor: 'black',
