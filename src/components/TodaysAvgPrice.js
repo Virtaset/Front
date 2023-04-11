@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 
-// Component that fetches todays prices and count average price of them
+// Component that fetches todays prices and returns the average price as a string
 export default function AveragePrice() {
-  const [average, setAverage] = useState(null);
+  const [average, setAverage] = useState(0);
 
   useEffect(() => {
     fetch("https://api.porssisahko.net/v1/latest-prices.json")
       .then((response) => response.json())
       .then((json) => {
-
         // Get today's date in ISO format and slice it to "YYYY-MM-DD" format
         const today = new Date().toISOString().slice(0, 10);
 
@@ -32,9 +31,5 @@ export default function AveragePrice() {
     return <Text>Loading...</Text>;
   }
 
-  return (
-    <Text>
-      {average}
-    </Text>
-  );
+  return average;
 }
