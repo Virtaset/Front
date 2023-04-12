@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Switch, Keyboard } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import moment from 'moment';
+import AveragePrice from './TodaysAvgPrice';
 
 const CalculatorComponent = () => {
     const [isAdvEnabled, setIsAdvEnabled] = useState(false);
@@ -25,9 +26,30 @@ const CalculatorComponent = () => {
     const toggleSwitch1 = () => {
         setIsDayOrYear(previousState => !previousState)
     }
+
+    useEffect(() => {
+        fetch("https://api.porssisahko.net/v1/latest-prices.json")
+          .then((response) => response.json())
+          .then((json) => {
+            // Get today's date in ISO format and slice it to "YYYY-MM-DD" format
+            const today = new Date().toISOString().slice(0, 10);
     
+            // Filter the price data to only include today's prices
+            const filteredData = json.prices.filter(
+              (item) => item.startDate.slice(0, 10) === today
+            );
+    
+            // Calculate the average price from the filtered data
+            const sum = filteredData.reduce((acc, item) => acc + item.price, 0);
+            const avg = sum / filteredData.length;
+    
+            setPrice(avg.toFixed(3));
+          })
+          .catch((error) => console.error(error));
+      }, []);
+
     //Get the current date and hour and format them suitable for the API
-    const date = moment().format('YYYY-MM-DD')
+    /*const date = moment().format('YYYY-MM-DD')
     const hour = moment().format('HH')
 
     const fetchPrice = () => {
@@ -38,9 +60,8 @@ const CalculatorComponent = () => {
             })
             .catch(err => console.error(err))
     }
-
+*/
     const calculateElectricityCost = () => {
-        fetchPrice();
         let consumptionEstimate = 0;
         switch (propertyType) {
             case "apartment":
@@ -64,7 +85,6 @@ const CalculatorComponent = () => {
 
     };
     const calculateElectricityCostv2 = () => {
-        fetchPrice();
         let cost = price * number;
         if (isDayOrYear) {
             cost = (cost / 365);
@@ -72,24 +92,24 @@ const CalculatorComponent = () => {
         setElectricityCost(cost.toFixed(2));
         Keyboard.dismiss();
     }
-    
+
 
     return (
         <View style={styles.calculatorcontainer}>
             <View style={styles.buttoncontainer}>
                 <View>
-                <Text style={styles.label}>Edistynyt laskin</Text>
-                <Switch
-                    onValueChange={toggleSwitch}
-                    value={isAdvEnabled}
-                />
+                    <Text style={styles.label}>Edistynyt laskin</Text>
+                    <Switch
+                        onValueChange={toggleSwitch}
+                        value={isAdvEnabled}
+                    />
                 </View>
                 <View>
-                <Text style={styles.label}>Päivän vai vuoden hinta?</Text>
-                <Switch
-                    onValueChange={toggleSwitch1}
-                    value={isDayOrYear}
-                />
+                    <Text style={styles.label}>Päivän vai vuoden hinta?</Text>
+                    <Switch
+                        onValueChange={toggleSwitch1}
+                        value={isDayOrYear}
+                    />
                 </View>
             </View>
             {isAdvEnabled ? (
