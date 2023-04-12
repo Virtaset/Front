@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import styles from '../styles/styleSheet.js';
 import moment from 'moment';
 
 const CalculatorComponent = () => {
@@ -39,8 +40,8 @@ const CalculatorComponent = () => {
     };
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Sähkön hintalaskuri</Text>
+        <View style={styles.calculatorContainer}>
+            <Text style={styles.calculatorTitle}>Sähkön hintalaskuri</Text>
             <Text style={styles.label}>Asunnon tyyppi:</Text>
             <DropDownPicker
                 open={open}
@@ -52,44 +53,9 @@ const CalculatorComponent = () => {
             />
             <Button title="Laske" onPress={calculateElectricityCost} />
             <Text style={styles.label}>Arvioitu sähkön hinta:</Text>
-            <Text style={styles.result}>{electricityCost}€</Text>
+            <Text style={styles.calculatorResult}>{electricityCost}€</Text>
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        width: 200,
-        height: 200,
-        borderRadius: 50,
-        marginVertical: 120,
-        marginLeft: 100,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-    },
-    label: {
-        fontSize: 18,
-        marginVertical: 10,
-    },
-    input: {
-        fontSize: 18,
-        borderWidth: 1,
-        borderColor: 'gray',
-        borderRadius: 5,
-        padding: 10,
-        marginBottom: 20,
-        width: '80%',
-    },
-    result: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginVertical: 20,
-    },
-});
 
 export default CalculatorComponent;
