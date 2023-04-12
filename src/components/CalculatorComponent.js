@@ -136,39 +136,6 @@ const CalculatorComponent = () => {
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        width: 200,
-        height: 200,
-        borderRadius: 50,
-        marginVertical: 120,
-        marginLeft: 100,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-    },
-    label: {
-        fontSize: 18,
-        marginVertical: 10,
-    },
-    input: {
-        fontSize: 18,
-        borderWidth: 1,
-        borderColor: 'gray',
-        borderRadius: 5,
-        padding: 10,
-        marginBottom: 20,
-        width: '80%',
-    },
-    result: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginVertical: 20,
-    },
-});
+
 
 export default CalculatorComponent;
