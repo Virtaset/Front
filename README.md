@@ -32,5 +32,5 @@ Important features include:
 - [ ] Add the history tab 
 - [ ] Search functionality in history tab
 - [ ] Add a tab where the user can compare electricity prices
-- [ ] A calculator to determine if using stock exchange electricity would be more profitable than if using fixed price contract
+- [x] A calculator to determine if using stock exchange electricity would be more profitable than if using fixed price contract
 
