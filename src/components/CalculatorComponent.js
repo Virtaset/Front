@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Switch, Keyboard } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import styles from '../styles/styleSheet.js';
 import moment from 'moment';
 import AveragePrice from './TodaysAvgPrice';
 
@@ -136,27 +137,11 @@ const CalculatorComponent = () => {
 };
 
 const styles = StyleSheet.create({
-    calculatorcontainer: {
-        width: 200,
-        height: 200,
-    },
-    buttoncontainer: {
-        width: 100,
-        height: 100,
-        alignItems: 'start',
-        justifyContent: 'start'
-    },
-    button: {
-        width: 60,
-        height: 60,
-        alignItems: 'start',
-        justifyContent: 'start'
-    },
     container: {
         width: 200,
         height: 200,
         borderRadius: 50,
-        marginVertical: 60,
+        marginVertical: 120,
         marginLeft: 100,
         justifyContent: 'center',
         alignItems: 'center'

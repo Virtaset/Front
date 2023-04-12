@@ -1,26 +1,12 @@
 import { Text, View, StyleSheet } from 'react-native';
+import styles from '../styles/styleSheet.js';
 
-//Simple headers for the app
+//Simple headers for the app, unused for now
 export default function Header() {
     return (
-        <View style={styles.container}>
+        <View style={styles.headerContainer}>
             <Text style={styles.boldHeader}>Sähkösovellus</Text>
             <Text style={styles.lightHeader}>Virtaset™</Text>
         </View>
     )
 }
-
-//Styles for the headers
-const styles = StyleSheet.create({
-    container: {
-        marginTop: 40,
-        marginHorizontal: 20,
-    },
-    boldHeader: {
-        fontSize: 25,
-        fontWeight: 'bold',
-    },
-    lightHeader: {
-        fontSize: 20,
-    }
-})

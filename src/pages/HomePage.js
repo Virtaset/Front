@@ -1,22 +1,14 @@
 import { View, StyleSheet } from 'react-native';
 import React from 'react';
-import Header from '../components/Header';
 import PriceNow from '../components/PriceNow';
 import LatestPrices from '../components/LatestPrices';
+import styles from '../styles/styleSheet.js';
 
 export default function HomePage() {
     return (
-        <View style={styles.container}>
+        <View style={styles.homeContainer}>
             <PriceNow />
             <LatestPrices />
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-})
-
