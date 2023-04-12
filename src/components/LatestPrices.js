@@ -13,7 +13,6 @@ export default function LatestPrices() {
             .then(response => response.json())
             .then(responseData => {
                 setLatestPrices(responseData.prices);
-                //console.log(latestPrices);
             })
             .catch(err => console.error(err))
     });
@@ -23,16 +22,15 @@ export default function LatestPrices() {
     const newEndDate = new Date().setUTCHours(24, 0, 0, 0);
 
     /*Filter the array to only include prices within the current day
-    and reverse the array so it displays correclty in the victorychart */
+    and reverse the array so it displays correctly in the victorychart */
     const filteredPrices = latestPrices.filter(price =>
         new Date(price.startDate) >= newStartDate && new Date(price.endDate) <= newEndDate);
 
     const arrangedPrices = filteredPrices.reverse();
-    //console.log(arrangedPrices)
 
     
     /* Format the price.startDate from 'YYYY-MM-DDTHH:MM:SS.000Z' to just 'HH'
-    to display it properly in the VictoryChart */
+    to display the hours correctly in the VictoryChart */
     for (const price of arrangedPrices) {
         const startDate = new Date(price.startDate);
         const startDateHours = startDate.getUTCHours();

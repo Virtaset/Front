@@ -1,6 +1,7 @@
 import { useState, React, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import styles from '../styles/styleSheet.js'
 import moment from 'moment';
 
 //Functional component to get the current price of electricity
@@ -33,33 +34,10 @@ export default function PriceNow() {
 
   //Return the current price and time
   return (
-    <View style={[styles.container, styles.elevation]}>
+    <View style={[styles.priceNowContainer, styles.elevation]}>
       <FontAwesome name='bolt' size={40} />
       <Text style={styles.electricityText}>Sähkön hinta klo {hour} :{"\n"} {price} snt/kWh</Text>
     </View>
 
   );
 }
-
-//Preliminary styles for the app
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 50,
-    marginBottom: 60,
-    borderRadius: 120,
-    width: 180,
-    height: 180,
-    backgroundColor: 'white',
-  },
-  elevation: {
-    shadowColor: 'black',
-    shadowOffset: { width: 5, height: 5 },
-    elevation: 5,
-    shadowOpacity: 0.1,
-  },
-  electricityText: {
-    fontSize: 15,
-  }
-});
