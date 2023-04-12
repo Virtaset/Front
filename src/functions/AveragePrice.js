@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+
 
 // Component that fetches todays prices and returns the average price as a string
 export default function TodaysAveragePrice() {
