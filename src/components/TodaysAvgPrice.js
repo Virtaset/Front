@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 
 // Component that fetches todays prices and returns the average price as a string
-export default function AveragePrice() {
+export default function TodaysAveragePrice() {
   const [average, setAverage] = useState(0);
 
   useEffect(() => {
@@ -26,10 +26,7 @@ export default function AveragePrice() {
       .catch((error) => console.error(error));
   }, []);
 
-  // If the average price has not been calculated yet, show "Loading..."
-  if (!average) {
-    return <Text>Loading...</Text>;
-  }
-
-  return average;
+  return (
+    <Text>{average}</Text>
+  )
 }
