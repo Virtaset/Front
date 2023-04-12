@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Text, View, ScrollView } from "react-native";
+import { Text, View } from "react-native";
 
 // Component that fetches todays prices and finds the lowest price and returns the object
-export default function LowestPrice() {
+export default function TodaysLowestPrice() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
