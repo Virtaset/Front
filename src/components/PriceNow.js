@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import styles from '../styles/styleSheet.js'
 import moment from 'moment';
+import { LinearGradient } from 'expo-linear-gradient'
 
 //Functional component to get the current price of electricity
 export default function PriceNow() {
@@ -34,9 +35,11 @@ export default function PriceNow() {
 
   //Return the current price and time
   return (
-    <View style={[styles.priceNowContainer, styles.elevation]}>
+    <View>
+      <LinearGradient colors={['#FACF39', '#FFE172', '#FFEEA7']} style={[styles.priceNowContainer, styles.elevation]}>
       <FontAwesome name='bolt' size={40} />
-      <Text style={styles.electricityText}>Sähkön hinta klo {hour} :{"\n"} {price} snt/kWh</Text>
+      <Text style={styles.electricityText}>Sähkön hinta nyt:{"\n"} {price} snt/kWh</Text>
+      </LinearGradient>
     </View>
 
   );

@@ -6,7 +6,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 
 import HomePage from './src/pages/HomePage';
 import Calculator from './src/pages/Calculator';
-
+import Header from './src/components/Header';
 
 
 export default function App() {
@@ -16,6 +16,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
+      <Header />
       <Tab.Navigator screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;

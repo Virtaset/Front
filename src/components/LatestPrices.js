@@ -28,6 +28,16 @@ export default function LatestPrices() {
 
     const arrangedPrices = filteredPrices.reverse();
 
+    const getColor = (price) => {
+        if (price > 12) {
+          return "#db2727";
+        } else if (price >= 7 && price <= 12) {
+          return "#FACF39";
+        } else {
+          return "#32a852";
+        }
+      };
+
     
     /* Format the price.startDate from 'YYYY-MM-DDTHH:MM:SS.000Z' to just 'HH'
     to display the hours correctly in the VictoryChart */
@@ -49,9 +59,7 @@ export default function LatestPrices() {
                 data={arrangedPrices}
                 y='price'
                 x="startDate"
-                style={{
-                    data: { stroke: "#c43a31" },
-                }}
+                style={{ data: { fill: ({ datum }) => getColor(datum.price) } }}
             />
         </VictoryChart>
     )

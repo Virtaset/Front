@@ -9,8 +9,8 @@ export default StyleSheet.create({
     priceNowContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 50,
-      marginBottom: 60,
+      marginTop: 40,
+      marginBottom: 40,
       borderRadius: 120,
       width: 180,
       height: 180,
@@ -67,5 +67,24 @@ export default StyleSheet.create({
 },
   lightHeader: {
     fontSize: 20,
+},
+virtaLogo: {
+  width: '35%',
+        height: 38,
+},
+averageBox: {
+  width: 115,
+  height: 70,
+  borderRadius: 20,
+  margin: 5,
+  justifyContent: 'center',
+  alignItems: 'center',
+  shadowColor: 'black',
+shadowOffset: { width: 5, height: 5 },
+elevation: 5,
+shadowOpacity: 0.,
+},
+averageBoxes: {
+  flexDirection: 'row',
 }
   });
