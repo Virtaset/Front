@@ -16,9 +16,21 @@ Important features include:
 
 - Shows the current electricity at the top
 - Shows the highest, the lowest and the average electricity price of the day
-- Shows the todays prices in a graphic table per hour
+- Shows todays prices in a graphic table
 
 ![Screenshot 2023-05-03 at 16 50 27](https://user-images.githubusercontent.com/104775534/235935757-c5e5f99a-e453-42ff-b556-af3e3e2ace51.png)
+
+### Laskuri page
+
+.........
+
+### Huomisen hinta
+
+- Shows the highest, the lowest and the average electricity price of tomorrow
+- Shows tomorrows prices in a graphic table
+
+![Screenshot 2023-05-03 at 16 33 44](https://user-images.githubusercontent.com/104775534/235936370-9dce6cbe-acf3-45fc-996a-73d4da5ee314.png)
+
 
 ## Built with
 - Expo
@@ -37,8 +49,8 @@ Important features include:
 
 ## Roadmap
 - [x] Make a frontpage for the app where the user can view current electricity prices
-- [ ] Add the history tab 
-- [ ] Search functionality in history tab
-- [ ] Add a tab where the user can compare electricity prices
+- [x] Make a frontpage for the app where the user can view tomorrows electricity prices
 - [x] A calculator to determine if using stock exchange electricity would be more profitable than if using fixed price contract
+- [x] Shows todays highest, lowest and average price
+- [x] Shows tomorrows highest, lowest and average price 
 
