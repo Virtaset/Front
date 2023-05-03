@@ -26,6 +26,7 @@ Important features include:
 
 ### Huomisen hinta page
 
+- If tomorrows prices have not come yet shows: 'Hinnat tulevat klo 14:00'
 - Shows the highest, the lowest and the average electricity price of tomorrow
 - Shows tomorrows prices in a graphic table
 
