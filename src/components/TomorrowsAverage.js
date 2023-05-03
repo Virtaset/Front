@@ -13,7 +13,7 @@ export default function TomorrowsAverages() {
 
 
   return (
-    <View style={styles.averageBoxes}>
+    <View style={styles.averageBoxes2}>
       <View>
         <LinearGradient colors={['#32a852', '#71bf86', '#92d4a2']} style={styles.averageBox} >
         <Feather name='arrow-up' size={30}/>

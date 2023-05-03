@@ -4,7 +4,8 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     homeContainer: {
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      backgroundColor: 'white',
     },
     priceNowContainer: {
       alignItems: 'center',
@@ -32,7 +33,8 @@ export default StyleSheet.create({
       marginVertical: 120,
       marginLeft: 100,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+  
   },
   calculatorTitle: {
       fontSize: 24,
@@ -42,6 +44,7 @@ export default StyleSheet.create({
   label: {
       fontSize: 18,
       marginVertical: 10,
+      textAlign: 'center',
   },
   input: {
       fontSize: 18,
@@ -60,6 +63,9 @@ export default StyleSheet.create({
   headerContainer: {
     marginTop: 40,
     marginHorizontal: 20,
+},
+result: {
+  textAlign: 'center',
 },
   boldHeader: {
     fontSize: 25,
@@ -86,5 +92,9 @@ shadowOpacity: 0.,
 },
 averageBoxes: {
   flexDirection: 'row',
-}
+},
+averageBoxes2: {
+  flexDirection: 'row',
+  marginTop: 40,
+},
   });

@@ -4,6 +4,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import styles from '../styles/styleSheet.js';
 import moment from 'moment';
 import AveragePrice from './TodaysAvgPrice';
+import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
 const CalculatorComponent = () => {
     const [isAdvEnabled, setIsAdvEnabled] = useState(false);
@@ -86,14 +87,14 @@ const CalculatorComponent = () => {
         <View style={styles.calculatorcontainer}>
             <View style={styles.buttoncontainer}>
                 <View>
-                    <Text style={styles.label}>Edistynyt laskin</Text>
+                    <Text>Edistynyt laskin</Text>
                     <Switch
                         onValueChange={toggleSwitch}
                         value={isAdvEnabled}
                     />
                 </View>
                 <View>
-                    <Text style={styles.label}>Päivän vai vuoden hinta?</Text>
+                    <Text>Päivän vai vuoden hinta?</Text>
                     <Switch
                         onValueChange={toggleSwitch1}
                         value={isDayOrYear}
