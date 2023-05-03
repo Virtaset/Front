@@ -24,7 +24,7 @@ Important features include:
 
 .........
 
-### Huomisen hinta
+### Huomisen hinta page
 
 - Shows the highest, the lowest and the average electricity price of tomorrow
 - Shows tomorrows prices in a graphic table
