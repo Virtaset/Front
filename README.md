@@ -10,7 +10,9 @@ Important features include:
 
 - **Seeing the current elecricity prices** - Open the app and the current electricity prices will be displayed
 
-- **Calculate the elecricity price of your home** - Open the app and navigate to calculator tab. There you can calculate the elecricity cost of your house using preset elecricity usage or input your own
+- **Calculate the elecricity price of your home** - Open the app and navigate to laskin tab. There you can calculate the elecricity cost of your house using preset elecricity usage or input your own
+
+- **Seeing tomorrows elecricity prices** - Open the app and navigate to 'Huomisen hinnat' tab. Tomorrows electricity prices will be displayed
 
 ### Hinta nyt page 
 
