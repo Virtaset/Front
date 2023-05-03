@@ -26,8 +26,8 @@ Important features include:
 
 - Provides the user a way to calculate their electricity cost using either:
 
-        1. A basic calculator that has preset electricity usage values depending on the type of home
-        2. An advanced calculator where the user can input their own electricity usage
+     1. A basic calculator that has preset electricity usage values depending on the type of home
+     2. An advanced calculator where the user can input their own electricity usage
         
 - Two calculation options. Calculate electricity cost for 1 day or a year
 
