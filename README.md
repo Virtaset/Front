@@ -12,7 +12,13 @@ Important features include:
 
 - **Calculate the elecricity price of your home** - Open the app and navigate to calculator tab. There you can calculate the elecricity cost of your house using preset elecricity usage or input your own
 
-- **See the history of electiricy prices** - Choose the "history" tab and view the history of electricity prices
+### Hinta nyt page 
+
+- Shows the current electricity at the top
+- Shows the highest, the lowest and the average electricity price of the day
+- Shows the todays prices in a graphic table per hour
+
+![Screenshot 2023-05-03 at 16 50 27](https://user-images.githubusercontent.com/104775534/235935757-c5e5f99a-e453-42ff-b556-af3e3e2ace51.png)
 
 ## Built with
 - Expo
