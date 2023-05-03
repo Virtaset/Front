@@ -27,6 +27,6 @@ export default function TodaysAveragePrice() {
   }, []);
 
   return (
-    <Text>{average}</Text>
+    <Text>{average} snt/kWh</Text>
   )
 }

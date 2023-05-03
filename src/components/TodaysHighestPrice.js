@@ -32,8 +32,7 @@ export default function TodaysHighestPrice() {
     <View>
       {data.map((item, index) => (
         <View key={index}>
-          <Text>Highest Price: {item.price}</Text>
-          <Text>Start Date: {item.startDate}</Text>
+          <Text>{item.price} snt/kWh</Text>
         </View>
       ))}
     </View>

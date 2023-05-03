@@ -30,8 +30,7 @@ export default function TodaysLowestPrice() {
     <View>
       {data.map((item, index) => (
         <View key={index}>
-          <Text>Lowest Price: {item.price}</Text>
-          <Text>Start Date: {item.startDate}</Text>
+          <Text>{item.price} snt/kWh</Text>
         </View>
       ))}
     </View>
