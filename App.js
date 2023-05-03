@@ -7,6 +7,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import HomePage from './src/pages/HomePage';
 import Calculator from './src/pages/Calculator';
 import Header from './src/components/Header';
+import PriceTomorrow from './src/pages/PriceTomorrow';
 
 
 export default function App() {
@@ -25,6 +26,8 @@ export default function App() {
             iconName = 'md-flash-outline';
           } else if (route.name === 'Laskuri') {
             iconName = 'md-calculator-outline';
+          } else if (route.name === 'Huomisen hinta') {
+            iconName = 'play-forward-outline';
           }
 
           // You can return any component that you like here!
@@ -36,6 +39,7 @@ export default function App() {
       })}>
         <Tab.Screen name="Hinta nyt" component={HomePage} />
         <Tab.Screen name="Laskuri" component={Calculator} />
+        <Tab.Screen name="Huomisen hinta" component={PriceTomorrow} />
       </Tab.Navigator>
       {/* What is StatusBar for?  */}
       <StatusBar style="auto" />
