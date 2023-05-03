@@ -21,9 +21,9 @@ export default function App() {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === 'Home') {
+          if (route.name === 'Hinta nyt') {
             iconName = 'md-flash-outline';
-          } else if (route.name === 'Calculator') {
+          } else if (route.name === 'Laskuri') {
             iconName = 'md-calculator-outline';
           }
 
@@ -34,8 +34,8 @@ export default function App() {
         tabBarActiveTintColor: 'green',
         tabBarInactiveTintColor: 'gray',
       })}>
-        <Tab.Screen name="Home" component={HomePage} />
-        <Tab.Screen name="Calculator" component={Calculator} />
+        <Tab.Screen name="Hinta nyt" component={HomePage} />
+        <Tab.Screen name="Laskuri" component={Calculator} />
       </Tab.Navigator>
       {/* What is StatusBar for?  */}
       <StatusBar style="auto" />
