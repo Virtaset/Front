@@ -36,8 +36,10 @@ Important features include:
 
 
 ## Built with
-- Expo
-- porssisahko.net api - https://porssisahko.net/api
+- [Expo](https://expo.dev/)
+- [porssisahko.net api](https://porssisahko.net/api)
+- [Victory Native](https://formidable.com/open-source/victory/docs/native/)
+- [Moment.js](https://momentjs.com/)
 
 ## Installation 
 
